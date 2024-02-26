@@ -1,0 +1,61 @@
+
+Creating Add to Cart functionality:
+1. Create a product page for each product: ==> DONE
+	on click of add to card button on product page the product item should be added to the cart and the cart icon should display a badge of product numbers. ==> DONE
+
+2. Create a Cart page: ==> DONE
+  first section:
+	1.The Cart page should have 7 columns 
+	2.first column for product images and a cross button for deleting products.
+	2.second column for product name.
+	3.third for Price of product 
+	4.fourth for quantity
+	5. for subtotal
+
+  second section: 
+	1. should have a h5 heading named "cart totals"
+	2. two rows with subtotal and total
+	3. a button for proceed to checkout
+
+3. Create a Checkout page:
+  Billing details:
+	1. first name
+	2. last name
+	3. country
+	4. street address (2 inputs)
+	5. Town/city
+	6. State/province
+	7. Postcode/ZIP
+	8. Phone number
+	9. Email address
+
+  Your order:
+	Your order section should have two columns in a tabular format:
+		1. Product ==> product name
+		2. Subtotal ==> product price
+		and a total row for total price of products
+		3. Gateways of methods:
+			1.Direct transfer
+			2.mastercard
+			3.jazzcash
+			4.visa
+			5.Cash on delivery
+	
+
+	let cartProductDetails = `
+      <tr class="row">
+                <td class="col-12 col-sm-12 col-md-12 col-lg-1 delete-product-btn">
+                  <img src="images/delete-btn.png" alt="delete-product-button">
+                </td>
+                <td class="col-12 col-sm-12 col-md-12 col-lg-1 cart-product-img">
+                  <img src="${productMainImg.src}" alt="cart-product-image" height="70px">
+                </td>
+                <td class="col-12 col-sm-12 col-md-12 col-lg-4 cart-product-name cart-text"><label class="cart-details">Product:</label>${productName.textContent}</td>
+                <td class="col-12 col-sm-12 col-md-12 col-lg-2 cart-product-price cart-text"><label class="cart-details">Price:</label> PKR ${productPrice.textContent}</td>
+                <td class="col-12 col-sm-12 col-md-12 col-lg-2 cart-product-quantity cart-text">
+                  <label class="cart-details">Quantity:</label>  
+                  <input type="number" disabled value="${quantityInput.value}">
+                </td>
+                <td class="col-12 col-sm-12 col-md-12 col-lg-2 cart-product-subtotal cart-text"><label class="cart-details">Subtotal:</label> PKR ${productPrice.textContent}</td>
+              </tr>
+      `;

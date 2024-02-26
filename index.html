@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TRUFIT - Elevate Your Style, Elevate Your Cart</title>
+    <!-- BOOTSTRAP CDN LINK -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- AOS LIBRARY CDN LINK -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<!-- CUSTOM CSS LINK -->
+<link rel="stylesheet" href="style.css">
+<!-- FONTAWESOME LIBRARY CDN LINK -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  </head>
+  <body>
+    <!-- navbar goes here -->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid navigation">
+          <a class="navbar-brand text-white ms-4 mt-3" href="index.html">
+            <img src="images/shopping-cart.png" class="logo-img pb-3" alt="">
+            <span class="logo-text fs-2">TRUFIT.</span></a>
+          <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end me-4" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 text-center">
+              <li class="nav-item">
+                <a class="nav-link" style="padding: 0;" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="padding: 0;" href="products.html" onclick="allProductsLink.click()">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="padding: 0;" href="blogs.html">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="padding: 0;" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="padding: 0;" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                  <a href="cart.html">
+                <div class="cart-div">
+                  <i class="fa-solid fa-cart-shopping cart fs-4" id="cart-icon"></i>
+                  <span class="item-number-placeholder"></span>
+                </div>
+              </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- carousel goes here -->
+
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-pause="false" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+    
+      <div class="carousel-inner">
+        <div class="carousel-item active cr-1" data-bs-interval="4000">
+          <div class="caption" id="cap1">
+            <h1 class="carousel-heading">Bringing the <span>Mall</span> <br>to your <span>Doorsteps</span>.</h1>
+            <p>Unleash Your Inner Fashionista!</p>
+            <a href="index.html#product-overview"><button class="carousel-btn" onclick="womenLink.click()">Shop now</button></a>
+          </div>
+        
+        </div>
+        <div class="carousel-item cr-2" data-bs-interval="4000">
+          <div class="caption" id="cap2">
+            <p>New Arrival!</p>
+            <h1 class="carousel-heading"><span>Dapper</span> threads for <span class="modern-men">Modern Men.</span></h1>
+            <a href="index.html#product-overview"><button class="carousel-btn" onclick="menLink.click()">Discover</button></a>
+          </div>
+        </div>
+        <div class="carousel-item cr-3" data-bs-interval="4000">
+          <div class="caption" id="cap3">
+          <h1 class="carousel-heading">Dress to <span>Impress</span>, Always!</h1>
+          <p>Branded apparels, accesories and much more.</p>
+          <a href="index.html#product-overview"><button class="carousel-btn" onclick="allProductsLink.click()">Explore</button></a>
+        </div>
+        </div>
+      </div>
+      </button>
+    </div>
+
+    
+
+    <!-- Trending products section: -->
+
+    <div class="heading-div d-flex justify-content-center">
+    <h1 class="trend-head mx-5 my-5">Trending Products</h1>
+  </div>
+    <section class="trending-section container-fluid py-1">
+      <div class="trending-div justify-content-center row"></div>
+    </section>
+  
+
+  <!-- product-entry-section here -->
+
+  <section class="product-entry-section my-5 container-fluid py-5">
+    <div class="product-entry-div" id="div-1">
+      <div class="text">
+        <h1>Street wear collection</h1>
+        <p>Our street wear collection is out now go check it out.</p>
+      <a href="products.html"><button>Shop now</button></a>
+    </div>
+    </div>
+    <div class="product-entry-div" id="div-2">
+      <div class="text">
+      <h1>New shoes Arrival</h1>
+      <p>Trendy footwears are arrived at the outlet.</p>
+      <a href="index.html#product-overview"><button  onclick="shoesLink.click()">Shop now</button></a>
+    </div>
+    </div>
+    <div class="product-entry-div" id="div-3">
+      <div class="text">
+      <h1>Men's Jacket</h1>
+      <p>Winter is here so as men's jackets.</p>
+      <a href="index.html#product-overview"><button onclick="menLink.click()">Shop now</button></a>
+    </div>
+    </div>
+  </section>
+
+
+<!-- all products section -->
+  <section class="all-products-section my-5 py-4"  id="product-overview">
+    <div class="all-products-div ">
+      <h1>Product Overview</h1>
+      <div class="filter-div">
+        <ul class="px-0">
+        <li>
+          <button class="filter-links" id="all-products-link">
+          All products
+      </button>
+    </li>
+        <li>
+          <button class="filter-links" id="men-link">
+            Men
+        </button>
+        </li>
+        <li>
+          <button class="filter-links" id="women-link">
+            Women
+        </button>
+        </li>
+        <li>
+          <button class="filter-links" id="shoes-link">
+            Shoes
+        </button>
+        </li>
+        <li>
+          <button class="filter-links" id="watches-link">
+            Watches
+        </button>
+        </li>
+      </ul>
+      </div>
+
+      <div class="collector my-4 d-flex justify-content-center"></div>
+      <div class="load-div d-flex justify-content-center container">
+        <button class="load-btn">
+          <span class="text">Load more <i class="fa-solid fa-plus"></i></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- product modal container goes here -->
+  <div class="product-modal-container">
+   <!-- Product Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centerd modal-dialog-scrollable modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="product-message modal-title" id="exampleModalLabel"></p>
+        <button type="button" class="btn-close modal-close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body container d-flex align-items-center justify-content-center">
+          <div class="row my-2">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 product-img-div">
+              <div class="other-img-div">
+                <img src="" alt="product-img-1" id="product-img-1">
+                <img src="" alt="product-img-2" id="product-img-2">
+                <img src="" alt="product-img-3" id="product-img-3">
+              </div>
+              <div class="main-img-div">
+                <img src="" alt="product-img" id="product-main-img">
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 product-details-div">
+              <p style="letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem;">Category: <span class="product-category"></span></p>
+              <h1 class="product-name"></h1>
+              <div class="stars-div"></div>
+              <h4 class="currency">PKR <span class="product-price"></span></h4>
+              <div class="description-div">
+              <h5 style="text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px;">Product Description:</h5>
+              <p class="product-description"></p>
+            </div>
+            <hr>
+            <div class="quantity-and-cart">
+              <label for="quantity-input" class="me-2">Quantity:</label>
+              <input type="number" id="quantity-input" class="me-4" min="1" max="10">
+              <button id="add-to-cart-btn">ADD TO CART <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+            </div>
+          </div>        
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+<!-- nike shoes section -->
+
+  <section class="nike-section">
+    <div class="nike-div container">
+    <div class="nike-img-div mx-1">
+      <img src="images/nike-shoe-1.png" alt="">
+    </div>
+    <div class="nike-text-div mx-1">
+      <h1>Nike Air Max SC</h1>
+      <p class="text-dark">With its heritage track look and visible cushioning, the Air Max SC is the perfect finish to any outfit. Lightweight, durable materials meet the demands you throw at them, making these sneakers the easy choice for whatever the day has in store for you.</p>
+      <a href="products.html"><button class="nike-btn">Shop now</button></a>
+    </div>
+  </div>
+  </section>
+
+  <!-- Instagram follow section goes here -->
+  <section class="instagram-section" rol>
+    <div class="instagram-div">
+      <h1>Follow Our Instagram</h1>
+      <p class="text-dark">Our official Instagram account <a href="https://www.instagram.com/mkayf_18/?igshid=MzNiNGNkZWQ4Mg%3D%3D" id="insta-link" target="_blank">@mkayf_18</a></p>
+      <div class="instagram-images my-5">  
+        <div class="insta-img">
+          <img src="images/Product-images/seafoam-polo-tshirt/seafoam-polo-1-2.png" alt="">
+        </div>
+        <div class="insta-img">
+          <img src="images/Product-images/chocolate-shalwar-kameez/chocolate-1-1.png" alt="">
+        </div>
+        <div class="insta-img">
+          <img src="images/Product-images/lemon-women/lemon-1-1.png" alt="">
+        </div>
+        <div class="insta-img">
+          <img src="images/Product-images/Blue-2pc-women/blue-women-1-2.png" alt="">
+        </div>
+        <div class="insta-img">
+          <img src="images/Product-images/dark-navy-shalwar-kameez/dark-navy-1-2.png" alt="">
+        </div>
+        <div class="insta-img">
+          <img src="images/Product-images/crew-neck-tshirt/crew-neck-1-2.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- testimonials seciton goes here -->
+
+  <section class="testimonial-section mx-5">
+    <div id="carouselExample" class="carousel slide caroosal" data-bs-pause="false" data-bs-ride="carousel">
+        <div class="carousel-inner tama">
+        <h1 class="testi-head text-center">Testimonials</h1>
+          <div class="carousel-item active tm" data-bs-interval="4000">
+            <div class="testimonial testi-1">
+              <div class="name-box mx-3">
+                <img src="images/person-1.png" alt="">
+                <h4>Michael Clarke</h4>
+              </div>
+              <div class="content-box mx-3 text-justify"><span class="quote">"</span>Shopping at TRUFIT is a pleasure! Their user-friendly website made finding what I needed a breeze, and the variety of products is outstanding. I couldn't be happier with my purchase.<span class="quote">"</span></div>
+            </div>
+          </div>
+          <div class="carousel-item tm" data-bs-interval="4000">
+            <div class="testimonial testi-2">
+              <div class="name-box mx-3">
+                <img src="images/person-2.png" alt="">
+                <h4>David Ramirez</h4>
+              </div>
+              <div class="content-box mx-3 text-justify">
+                <span class="quote">"</span>I've been a loyal customer of TRUFIT for a while now. The selection of products is vast, the prices are competitive, and the shipping is always on time. It's a one-stop shop for all my needs!<span class="quote">"</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item tm " data-bs-interval="4000">
+            <div class="testimonial testi-3">
+              <div class="name-box mx-3">
+                <img src="images/person-3.png" alt="">
+                <h4>Sarah Anderson</h4>
+              </div>
+              <div class="content-box mx-3 text-justify">
+                <span class="quote">"</span>I've shopped online extensively, and TRUFIT stands out as one of the best. Their customer service is top-notch, and the products are of the highest quality. I highly recommend them to anyone looking for great deals and a seamless shopping experience.<span class="quote">"</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item tm" data-bs-interval="4000">
+            <div class="testimonial testi-4">
+              <div class="name-box mx-3">
+                <img src="images/person-4.png" alt="">
+                <h4>Mark Daniel</h4>
+              </div>
+              <div class="content-box mx-3 text-justify">
+                <span class="quote">"</span>I recently ordered from TRUFIT and was impressed with the product's quality and the quick delivery. The website is well-organized, making it easy to find what I was looking for. This is my new go-to for online shopping.<span class="quote">"</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item tm" data-bs-interval="4000">
+            <div class="testimonial testi-5">
+              <div class="name-box mx-3">
+                <img src="images/person-5.png" alt="">
+                <h4>Laura John</h4>
+              </div>
+              <div class="content-box mx-3 text-justify">
+                <span class="quote">"</span>I am beyond thrilled with my recent purchase from TRUFIT. The product quality exceeded my expectations, and the speedy delivery made my shopping experience truly exceptional. I'll definitely be back for more!<span class="quote">"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- specilaties section goes here -->
+
+  <section class="speciality-section container-fluid my-5">
+    <div class="speciality-div row justify-content-center">
+      <div class="special-box col-lg-3 col-md-6 col-sm-12 text-center">
+        <img src="images/quality-product.png" alt="" class="my-3 icon">
+        <h4 class="my-3">Quality Products</h4>
+      </div>
+      <div class="special-box col-lg-3 col-md-6 col-sm-12 text-center">
+        <img src="images/free-delivery.png" alt="" class="my-3 icon">
+        <h4 class="my-3">Free delivery</h4>
+      </div>
+      <div class="special-box col-lg-3 col-md-6 col-sm-12 text-center">
+        <img src="images/customer-support.png" alt="" class="my-3 icon">
+        <h4 class="my-3">24/7 customer Support</h4>
+      </div>
+      <div class="special-box col-lg-3 col-md-6 col-sm-12 text-center">
+        <img src="images/reasonable-price.png" alt="" class="my-3 icon">
+        <h4 class="my-3">Reasonable Prices</h4>
+      </div>
+    </div>
+  </section>  
+
+
+  <!-- footer section goes here -->
+
+  <footer class="pt-5 justify-content-center">
+    <div class="row first-row">
+    <div class="col col-md-6 col-sm-12 col-lg-3 trufit-footer footer-item">
+      <h4 class="mb-3">TRUFIT</h4>
+      <p><a href="#">About us</a></p>
+      <p><a href="#">Conditions</a></p>
+      <p><a href="#">Blogs</a></p>
+      <p><a href="#">Affiliate Programme</a></p>
+    </div>
+    <div class="col col-md-6 col-sm-12 col-lg-3 customer-footer footer-item">
+      <h4 class="mb-3">Customer service</h4>
+      <p><a href="#">FAQ</a></p>
+      <p><a href="#">Delivery information</a></p>
+      <p><a href="#">Privacy policy</a></p>
+      <p><a href="#">Returns & Refunds</a></p>
+    </div>
+    <div class="col col-md-6 col-sm-12 col-lg-3 contact-footer footer-item">
+      <h4 class="mb-3">Contact us</h4>
+      <p>Do you have any questions and suggestions?</p>
+      <p><a href="mailto: muhammadkaif150@gmail.com">muhammadkaif150@gmail.com</a></p>
+      <p>Do you need assistance? Give us a call</p>
+      <p><a href="tel: 03343739795">+923343739795</a></p>
+    </div>
+    <div class="col col-md-6 col-sm-12 col-lg-3 social-links-footer footer-item">
+      <h4 class="mb-3">Social links</h4>
+      <p>Connect with us on</p>
+      <p>
+        <a href="https://www.facebook.com/xtylishkaif.sehwani" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/mkayf_18/?igshid=MzNiNGNkZWQ4Mg%3D%3D" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/muhammad-kaif-015024254" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/mkayf" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </p>
+    </div>
+  </div>
+  <div class="row second-row py-2">
+    <div class="col copyright pt-3">
+      <p>&copy; Designed & Developed by Muhammad Kaif</p>
+    </div>
+    <div class="col payment-div">
+      <h5 class="text-light">Payment options: </h5>
+      <img src="images/payment-1.png" alt="" width="30px">
+      <!-- <img src="images/payment-2.jpg" alt="" width="30px"> -->
+      <img src="images/payment-3.png" alt="" width="30px">
+      <img src="images/payment-4.png" alt="" width="30px">
+    </div>
+  </div>
+  </footer>
+    
+
+ <!-- script section -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

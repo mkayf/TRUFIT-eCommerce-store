@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get in touch with us - TRUFIT</title>
+   <!-- BOOTSTRAP CDN LINK -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+   <!-- AOS LIBRARY CDN LINK -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<!-- CUSTOM CSS LINK -->
+<link rel="stylesheet" href="style.css">
+<!-- FONTAWESOME LIBRARY CDN LINK -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <!-- navbar goes here -->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid navigation">
+          <a class="navbar-brand text-white ms-4 mt-3" href="index.html">
+            <img src="images/shopping-cart.png" class="logo-img pb-3" alt="">
+            <span class="logo-text fs-2">TRUFIT.</span></a>
+          <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end me-4" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 text-center">
+              <li class="nav-item">
+                <a class="nav-link" style="padding: 0;" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="padding: 0;" href="products.html" onclick="allProductsLink.click()">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="padding: 0;" href="blogs.html">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="padding: 0;" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="padding: 0;" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                  <a href="cart.html">
+                <div class="cart-div">
+                  <i class="fa-solid fa-cart-shopping cart fs-4" id="cart-icon"></i>
+                  <span class="item-number-placeholder"></span>
+                </div>
+              </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+      <!-- contact page banner -->
+      <div class="banner" id="contact-banner">
+        <h1>Contact us</h1>
+      </div>
+
+      <!-- contact page section -->
+      <div class="main-section">
+      <section class="top-part container">
+        <div class="row justify-content-around">
+            <div class="contact-box col-12 col-sm-12 col-md-3 col-lg-3 text-center">
+                <i class="fa-solid fa-location-dot my-2"></i>
+                <h5 class="my-2">Outlet Location</h5>
+                <p class="my-2"><a href="https://maps.app.goo.gl/pEFxCvi9TP8XhP9J6" target="_blank">TRUFIT - Dolmen Mall Tariq Road</a></p>
+            </div>
+            <div class="contact-box col-12 col-sm-12 col-md-3 col-lg-3 text-center">
+                <i class="fa-solid fa-phone my-2"></i>
+                <h5 class="my-2">Phone Number</h5>
+                <p class="my-2"><a href="tel:03343739795">0334-3739795</a></p>
+            </div>
+            <div class="contact-box col-12 col-sm-12 col-md-3 col-lg-3 text-center">
+                <i class="fa-solid fa-envelope my-2"></i>
+                <h5 class="my-2">Email address</h1>
+                <p class="my-2"><a href="mailto: muhammadkaif7tk@gmail.com">muhammadkaif7tk@gmail.com</a></p>
+            </div>
+        </div>
+      </section>
+
+      <section class="middle-part container">
+        <div class="row form-row" id="form-target">
+            <div class="formdiv col-12 col-sm-12 col-md-6 col-lg-6">
+                <h2 id="form-heading">Get in touch with us</h2>
+                <form class="container-fluid">
+                  <div class="row">
+                  <div class="name-div input-div col-12 col-lg-12 col-md-12 col-sm-12">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" autocomplete="off">
+                    <span class="text-danger" id="nameError"></span>
+                  </div>
+                  <div class="email-div input-div col-12 col-lg-12 col-md-12 col-sm-12">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" autocomplete="off">
+                    <span class="text-danger" id="emailError"></span>
+                  </div>
+                  <div class="subject-div input-div col-12 col-lg-12 col-md-12 col-sm-12">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" autocomplete="off">
+                    <span class="text-danger" id="subjectError"></span>
+                  </div>
+                  <div class="message-div input-div col-12 col-lg-12 col-md-12 col-sm-12">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" spellcheck="false"></textarea>
+                    <span class="text-danger" id="messageError"></span>
+                  </div>
+                  <div class="register-div input-div col-12">
+                    <input type="submit" id="register-btn" value="Send message">
+                    <span class="text-center d-block" id="formError"></span>
+                  </div>
+                </div>
+                </form>
+              </div>
+
+            <div class="img-part  col-12 col-sm-12 col-md-6 col-lg-6">
+    <!-- form img goes here           -->
+</div>
+    </div>
+      </section>
+
+      <section class="bottom-part">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.6254012511968!2d67.06005937443022!3d24.87664054461175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33eecaef72355%3A0x3c9cca44c77de888!2sDolmen%20Mall%20Tariq%20Road!5e0!3m2!1sen!2s!4v1706375242490!5m2!1sen!2s" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+    </div>
+      <!-- footer section goes here -->
+
+  <footer class="pt-5 justify-content-center">
+    <div class="row first-row">
+    <div class="col col-md-6 col-sm-12 col-lg-3 trufit-footer footer-item">
+      <h4 class="mb-3">TRUFIT</h4>
+      <p><a href="#">About us</a></p>
+      <p><a href="#">Conditions</a></p>
+      <p><a href="#">Blogs</a></p>
+      <p><a href="#">Affiliate Programme</a></p>
+    </div>
+    <div class="col col-md-6 col-sm-12 col-lg-3 customer-footer footer-item">
+      <h4 class="mb-3">Customer service</h4>
+      <p><a href="#">FAQ</a></p>
+      <p><a href="#">Delivery information</a></p>
+      <p><a href="#">Privacy policy</a></p>
+      <p><a href="#">Returns & Refunds</a></p>
+    </div>
+    <div class="col col-md-6 col-sm-12 col-lg-3 contact-footer footer-item">
+      <h4 class="mb-3">Contact us</h4>
+      <p>Do you have any questions and suggestions?</p>
+      <p><a href="mailto: muhammadkaif150@gmail.com">muhammadkaif150@gmail.com</a></p>
+      <p>Do you need assistance? Give us a call</p>
+      <p><a href="tel: 03343739795">+923343739795</a></p>
+    </div>
+    <div class="col col-md-6 col-sm-12 col-lg-3 social-links-footer footer-item">
+      <h4 class="mb-3">Social links</h4>
+      <p>Connect with us on</p>
+      <p>
+        <a href="https://www.facebook.com/xtylishkaif.sehwani" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/mkayf_18/?igshid=MzNiNGNkZWQ4Mg%3D%3D" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/muhammad-kaif-015024254" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/mkayf" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </p>
+    </div>
+  </div>
+  <div class="row second-row py-2">
+    <div class="col copyright pt-3">
+      <p>&copy; Designed & Developed by Muhammad Kaif</p>
+    </div>
+    <div class="col payment-div">
+      <h5 class="text-light">Payment options: </h5>
+      <img src="images/payment-1.png" alt="" width="30px">
+      <!-- <img src="images/payment-2.jpg" alt="" width="30px"> -->
+      <img src="images/payment-3.png" alt="" width="30px">
+      <img src="images/payment-4.png" alt="" width="30px">
+    </div>
+  </div>
+  </footer>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
