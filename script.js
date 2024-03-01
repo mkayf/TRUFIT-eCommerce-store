@@ -692,7 +692,7 @@ document.getElementById("continue-shopping").addEventListener("click",()=>{
 // displaying cart items in the cart page:
 
 const displayCartItems = () => {
-  var cartContainer = document.querySelector("#cart-container");
+  let cartContainer = document.querySelector("#cart-container");
   let storedItems = '';
   let cartItem = JSON.parse(sessionStorage.getItem("cart-item")) ?? [];
   cartItem.forEach((product,index)=>{
@@ -737,6 +737,7 @@ const removeItem = (index) => {
   cartItem.splice(index, 1);
   sessionStorage.setItem("cart-item", JSON.stringify(cartItem));
   displayCartItems();
+  cartSubtotalCalculation()
 }
 
 const updateItem = (index) => {
@@ -746,9 +747,51 @@ const updateItem = (index) => {
     cartItem[index].product_subtotal = cartItem[index].product_price * Number(cartInput.value); 
     sessionStorage.setItem("cart-item", JSON.stringify(cartItem));
     displayCartItems();
+    cartSubtotalCalculation();
 }
 
-displayCartItems()
+displayCartItems();
 showItemNumbers();
 
+// 
 
+var cartSubtotalCalculation = () => {
+  let cartTotalSection = document.querySelector(".cart-totals-section");
+  let cartSubtotal = document.getElementsByClassName("cart-subtotal");
+  let subtotalAmount = 0;
+  Array.from(cartSubtotal).forEach((amount)=>{
+    subtotalAmount += Number.parseInt(amount.textContent.slice(4).replace(/[^\d.-]/g, ''))
+  })
+  if(cartTotalSection != null){
+  cartTotalSection.innerHTML = `
+  <div class="cart-totals-div">
+            <div class="total-head-part">
+            <h5>Cart totals</h5>
+          </div>
+            <div class="total-body-part">
+              <div>
+              <p id="subtotal-label">Subtotal:</p> <span id="subtotal-amount">PKR ${Intl.NumberFormat().format(subtotalAmount)}</span>
+              </div>
+              <div>
+              <p id="sales-tax-label">Sales tax (13% sindh):</p> <span id="tax-amount">PKR ${Intl.NumberFormat().format(Math.floor(subtotalAmount * 13/100))}</span>
+            </div>
+              <div>
+              <p id="total-label">Total:</p> <span id="total-amount">PKR ${Intl.NumberFormat().format(Math.floor(subtotalAmount + (subtotalAmount * 13/100)))}</span>
+            </div>
+          </div>
+          <a href="checkout.html"><button id="checkout-btn">proceed to checkout <i class="fa-solid fa-arrow-right"></i></button></a>
+          </div>
+  `;
+  }
+}
+
+if(window.location.pathname.includes("cart.html") || window.location.pathname.includes("checkout.html")){
+  cartSubtotalCalculation();
+}
+
+
+
+
+// let cartContainer = document.getElementById("cart-container")
+// console.log(cartContainer)
+// let cartsection = document.querySelector(".cart-totals-section");

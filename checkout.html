@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart - TRUFIT</title>
+    <title>Checkout - TRUFIT</title>
     <!-- BOOTSTRAP CDN LINK -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- AOS LIBRARY CDN LINK -->
@@ -55,45 +55,9 @@
         </nav>
       </header>
 
-      <div class="banner cart-banner">
-        <h1>Cart</h1>
-      </div>
 
-      <main class="container">
-        <h5 class="my-3" id="continue-shopping"><i class="fa-solid fa-arrow-left"></i> Continue shopping</h5>
-        <!-- cart products section goes here where all added products will be displayed -->
-        <section class="cart-products-section">
-          <!-- cart header which will dissappear in small to medium screen size -->
-          <table class=" w-100">
-            <thead>
-              <tr class="row">
-                <th class="col-12 col-sm-12 col-md-12 col-lg-1"></th>
-                <th class="col-12 col-sm-12 col-md-12 col-lg-1"></th>
-                <th class="col-12 col-sm-12 col-md-12 col-lg-3">Product</th>
-                <th class="col-12 col-sm-12 col-md-12 col-lg-2">Price</th>
-                <th class="col-12 col-sm-12 col-md-12 col-lg-2">Quantity</th>
-                <th class="col-12 col-sm-12 col-md-12 col-lg-2">Subtotal</th>
-                <th class="col-12 col-sm-12 col-md-12 col-lg-1"></th>
-              </tr>
-            </thead>
-            <tbody id="cart-container">
-              <!-- cart products will be displayed here -->
-            </tbody>
-          </table>
-        </section>
-        
-        <!-- cart total section goes here where cart totals will be displayed -->
-        <section class="cart-totals-section my-4">
-           <!-- cart subtotal tax and total amounts will be displayed here -->
-        </section>
-      </main>
 
-      <section class="sale-section my-5 container">
-        <a href="products.html"><h3 class="sale-heading">SALE UP TO 
-        40% OFF FOR ALL CLOTHES & FASHION ITEMS, ON ALL BRANDS.</h3></a>
-      </section>
-
-      <!-- footer section goes here -->
+       <!-- footer section goes here -->
 
   <footer class="pt-5 justify-content-center">
     <div class="row first-row">
@@ -143,13 +107,15 @@
   </div>
   </footer>
 
-
-     <!-- script section -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-     <script>
-       AOS.init();
-     </script>
-     <script src="script.js"></script>
+  <!-- script section -->
+  <!-- BOOTSTRAP CDN SCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <!-- AOS LIBRARY CDN -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- MY SCRIPT -->
+  <script src="script.js"></script>
 </body>
 </html>

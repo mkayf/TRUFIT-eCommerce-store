@@ -12,7 +12,7 @@ Creating Add to Cart functionality:
 	4.fourth for quantity
 	5. for subtotal
 
-  second section: 
+  second section: ==> DONE
 	1. should have a h5 heading named "cart totals"
 	2. two rows with subtotal and total
 	3. a button for proceed to checkout
