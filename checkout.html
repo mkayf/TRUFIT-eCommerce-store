@@ -55,6 +55,121 @@
         </nav>
       </header>
 
+      <div class="banner" id="checkout-banner">
+        <h1>Checkout</h1>
+      </div>
+
+      <div class="checkout-main container">
+        <div class="row">
+            <div class="billing-section col-12 col-sm-12 col-md-12 col-lg-7">
+                <h5>Billing details</h5>
+                <hr>
+                <div class="billing-form-div">
+                    <form>
+                        <div class="row billing-row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                <label for="fname">First name <span class="important">*</span></label>
+                                <input type="text" id="fname" class="input-box">
+                                <span class="f-name-error" style="color: red; font-size: 0.9rem;"></span>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                <label for="lname">Last name <span class="important">*</span></label>
+                                <input type="text" id="lname" class="input-box">
+                                <span class="l-name-error" style="color: red; font-size: 0.9rem;"></span>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <label for="company-name">Company name (optional)</label>
+                                <input type="text" id="company-name" class="input-box">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <label for="street-address">Street address <span class="important">*</span></label>
+                                <input type="text" id="street-address" placeholder="House number and street name" class="input-box">
+                                <input type="text" placeholder="Apartment, suite, unit, etc. (optional)" class="input-box">
+                                <span class="street-error" style="color: red; font-size: 0.9rem;"></span>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                <label for="city">Town/City <span class="important">*</span></label>
+                                <input type="text" id="city" class="input-box">
+                                <span class="city-error" style="color: red; font-size: 0.9rem;"></span>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                <label for="state">State/County <span class="important">*</span></label>
+                                <select id="state">
+                                    <option value="Select State">Select State</option>
+                                    <option value="Azad Kashmir">Azad Kashmir</option>
+                                    <option value="Balochistan">Balochistan</option>
+                                    <option value="FATA">FATA</option>
+                                    <option value="Gilgit Baltistan">Gilgit Baltistan</option>
+                                    <option value="Islamabad">Islamabad</option>
+                                    <option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Sindh">Sindh</option>
+                                </select>
+                                <span class="state-error" style="color: red; font-size: 0.9rem;"></span>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                <label for="post-code">Postcode/ZIP <span class="important">*</span></label>
+                                <input type="number" id="post-code" class="input-box" >
+                                <span class="post-error" style="color: red; font-size: 0.9rem;"></span>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                <label for="phone-n">Phone <span class="important">*</span></label>
+                                <input type="number" id="phone-n" class="input-box">
+                                <span class="phone-n-error" style="color: red; font-size: 0.9rem;"></span>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <label for="email-add">Email address <span class="important">*</span></label>
+                                <input type="email" id="email-add" class="input-box">
+                                <span class="email-add-error" style="color: red; font-size: 0.9rem;"></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="order-section col-12 col-sm-12 col-md-12 col-lg-5">
+              <h5>Order details</h5>
+              <hr>
+              <div class="order-div">
+                <div class="order-header-div">
+                  <p>Product</p><p>Subtotal</p>
+                </div>
+                <div class="order-tax-div">
+                  <p>Sales tax (13% sindh)</p><p id="order-tax"></p>
+                </div>
+                <div class="order-total-div">
+                  <p>Total</p><p id="order-total"></p>
+                </div>
+              </div>
+              <div class="order-payment-div">
+                <div class="payment-head-div d-flex justify-content-between">
+                <h5>Select payment gateway</h5>
+                <div class="pt-2">
+                  <img src="images/payment-1.png" alt="" width="40px">
+                  <img src="images/payment-3.png" alt="" width="40px">
+                  <img src="images/payment-4.png" alt="" width="40px">
+                </div>
+              </div>
+                <hr>
+              <div>
+                <input type="radio" name="payment-gateway" id="mastercard">
+                <label for="mastercard">Mastercard</label>
+              </div>
+              <div>
+                <input type="radio" name="payment-gateway" id="jazzcash" checked>
+                <label for="jazzcash">JazzCash</label>
+              </div>
+              <div>
+                <input type="radio" name="payment-gateway" id="visa">
+                <label for="visa">Visa</label>
+              </div>
+              <div>
+                <input type="radio" name="payment-gateway" id="cod">
+                <label for="code">Cash on delivery</label>
+              </div>
+              </div>
+            </div>
+        </div>
+      </div>
 
 
        <!-- footer section goes here -->
@@ -115,7 +230,7 @@
   <script>
     AOS.init();
   </script>
-  <!-- MY SCRIPT -->
+  <!-- APPLICATION SCRIPT -->
   <script src="script.js"></script>
 </body>
 </html>

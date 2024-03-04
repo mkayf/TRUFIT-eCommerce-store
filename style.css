@@ -1203,7 +1203,6 @@ footer .first-row {
 }
 .banner h1 {
   font-size: 100px;
-  /* font-weight: bold; */
   color: white;
 }
 #products-banner {
@@ -1746,7 +1745,6 @@ tbody tr td{
 }
 .total-body-part p{
   margin-bottom: 0;
-  
   height: 50px;
   font-weight: bold;
   font-size: 0.9rem;
@@ -1755,6 +1753,12 @@ tbody tr td{
   display: flex;
   align-items: center;
 }
+
+#subtotal-amount,#tax-amount,#total-amount{
+  letter-spacing: 2px;
+  color: black;
+}
+
 #checkout-btn{
   margin: 15px auto;
   height: 60px;
@@ -1766,6 +1770,8 @@ tbody tr td{
   color: white;
   border: none;
 }
+
+
 @media only screen and (max-width: 992px){
   main a h5{
    font-size: 0.9rem;
@@ -1819,9 +1825,9 @@ tbody tr td{
   .total-body-part p{
     color: black;
   }
-}
-#subtotal-amount,#tax-amount,#total-amount{
-  letter-spacing: 2px;
+  .total-body-part div{
+    padding: 0 10px;
+  }
 }
 
 @media only screen and (max-width: 576px){
@@ -1829,9 +1835,150 @@ tbody tr td{
     width: 100%;
     font-size: 0.8rem;
   }
+  #subtotal-amount,#tax-amount,#total-amount, .total-body-part div p{
+    font-size: 0.8rem;
+  }
   #checkout-btn{
-    width: 100%;
-    margin: 0;
-    
+    width: 270px;
+  }
+}
+
+/* Checkout page styling goes here */
+#checkout-banner{
+  background: linear-gradient(rgba(0, 0, 0, 0.1), #1a3246d0),
+    url("images/checkout-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.checkout-main{
+  margin: 100px auto;
+}
+.billing-section h5{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+.billing-row div label{
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #181a7a;
+  position: relative;
+  top: 10px;
+}
+.important{
+  color: red;
+}
+/* .billing-row div input{
+  background-color: #f6f6f9;
+} */
+#state{
+  height: 30px;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  background-color: #f6f6f9;
+  display: block;
+  padding: 5px;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  outline: none;
+}
+
+.input-box {
+  font-size: 1.1rem;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  color: black;
+  width: 100%;
+  background-color: transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.input-box:focus {
+  border-color: #08AEEA;
+  outline: none;
+}
+
+/* order section styling goes here */
+.order-section{
+  border: 1px solid #181a7a;
+  padding: 0 20px;
+}
+.order-section h5{
+  margin-top: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.order-section .order-div{
+  /* padding: 0 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.order-div div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+  margin: 15px 0;
+  padding: 5px 0;
+}
+.order-div p{
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  color: black;
+}
+.order-div .order-header-div p, .order-total-div p{
+  font-weight: bold;
+}
+.x-small{
+  text-transform: lowercase;
+  font-size: 1rem;
+}
+.order-payment-div{
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+.order-payment-div h5{
+  font-size: 1rem;
+  color: #181a7a;
+}
+.order-payment-div div{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  /* border: 2px solid red; */
+}
+.order-payment-div div label{
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.order-payment-div div input{
+  width: 16px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px){
+  .order-section{
+    margin-top: 50px;
+  }
+  .order-section .order-div{
+    padding: 8px;
+  }
+  .order-div p{
+    font-size: 0.8rem;
   }
 }

@@ -581,7 +581,7 @@ if (window.location.pathname.includes("products.html")) {
 }
 
 // product modal functionality
-if((window.location.pathname !== "/cart.html") && (window.location.pathname !== "/blogs.html") && (window.location.pathname !== "/about.html") && (window.location.pathname !== "/contact.html")){
+if((window.location.pathname !== "/cart.html") && (window.location.pathname !== "/blogs.html") && (window.location.pathname !== "/about.html") && (window.location.pathname !== "/contact.html") && (window.location.pathname !== "/checkout.html")){
 let productModal = new bootstrap.Modal("#productModal");
 let productDiv = document.getElementsByClassName("product-div");
 let productMessage = document.querySelector(".product-message");
@@ -704,7 +704,7 @@ const displayCartItems = () => {
     <td class="col-12 col-sm-12 col-md-12 col-lg-1 cart-product-img">
       <img src="${product.product_img}" alt="cart-product-image" height="70px">
     </td>
-    <td class="col-12 col-sm-12 col-md-12 col-lg-3 cart-product-name cart-text"><label class="cart-details">Product:</label>${product.product_name}</td>
+    <td class="col-12 col-sm-12 col-md-12 col-lg-3 cart-product-name cart-text"><label class="cart-details">Product:</label><span class="p-name">${product.product_name}</span></td>
     <td class="col-12 col-sm-12 col-md-12 col-lg-2 cart-product-price cart-text"><label class="cart-details">Price:</label> <span class="cart-price">PKR ${Intl.NumberFormat().format(product.product_price)}</span></td>
     <td class="col-12 col-sm-12 col-md-12 col-lg-2 cart-product-quantity cart-text">
       <label class="cart-details">Quantity:</label>  
@@ -785,13 +785,254 @@ var cartSubtotalCalculation = () => {
   }
 }
 
-if(window.location.pathname.includes("cart.html") || window.location.pathname.includes("checkout.html")){
+if(window.location.pathname.includes("cart.html")){
   cartSubtotalCalculation();
+}
+
+// Checkout billing section validation
+
+const validateBillingDetails = () => {
+  // input fields
+  let fName = document.getElementById("fname");
+  let lName = document.getElementById("lname");
+  let streetAddress = document.getElementById("street-address");
+  let city = document.getElementById("city");
+  let state = document.getElementById("state");
+  let postCode = document.getElementById("post-code");
+  let phoneNum = document.getElementById("phone-n");
+  let emailAdd = document.getElementById("email-add");
+  // error spans
+  let fNameError = document.querySelector(".f-name-error");
+  let lNameError = document.querySelector(".l-name-error");
+  let streetError = document.querySelector(".street-error");
+  let cityError = document.querySelector(".city-error");
+  let stateError = document.querySelector(".state-error");
+  let postError = document.querySelector(".post-error");
+  let phoneNumError = document.querySelector(".phone-n-error");
+  let emailAddError = document.querySelector(".email-add-error");
+  // validators
+  var validFName;
+  var validLName;
+  var validStreet;
+  var validCity;
+  var validState;
+  var validPostCode;
+  var validPhoneNum;
+  var validEmailAdd;
+  
+  // first name validation
+ fName.addEventListener('input', (event)=>{
+  if(event.target.value == ""){
+    fNameError.innerHTML = "Please enter first name in this field!";
+    event.target.style.borderBottom = "2px solid red";
+    validFName = false;
+    }
+    else if(!isNaN(event.target.value)){
+    fNameError.innerHTML = "Please enter alphabetic characters!";
+    event.target.style.borderBottom = "2px solid red";
+    validFName = false;
+    }
+    else if(event.target.value.search(/[0-9]/) > 0){
+    fNameError.innerHTML = "You cannot enter digits within name!";
+    event.target.style.borderBottom = "2px solid red";
+    validFName = false;
+    }
+    else if(event.target.value.length < 2){
+    fNameError.innerHTML = "Please enter a proper name!"
+    event.target.style.borderBottom = "2px solid red";
+    validFName = false;
+    }
+    else{
+    fNameError.innerHTML = "";
+    event.target.style.borderBottom = "2px solid #08AEEA";
+    validFName = true;
+    }
+ }) 
+//  last name validation
+ lName.addEventListener('input', (event)=>{
+  if(event.target.value == ""){
+    lNameError.innerHTML = "Please enter last name in this field!";
+    event.target.style.borderBottom = "2px solid red";
+    validLName = false;
+    }
+    else if(!isNaN(event.target.value)){
+    lNameError.innerHTML = "Please enter alphabetic characters!";
+    event.target.style.borderBottom = "2px solid red";
+    validLName = false;
+    }
+    else if(event.target.value.search(/[0-9]/) > 0){
+    lNameError.innerHTML = "You cannot enter digits within name!";
+    event.target.style.borderBottom = "2px solid red";
+    validLName = false;
+    }
+    else if(event.target.value.length < 2){
+    lNameError.innerHTML = "Please enter a proper name!"
+    event.target.style.borderBottom = "2px solid red";
+    validLName = false;
+    }
+    else{
+    lNameError.innerHTML = "";
+    event.target.style.borderBottom = "2px solid #08AEEA";
+    validLName = true;
+    }
+ })
+  // street address validation
+  streetAddress.addEventListener('input', (event)=>{
+    if(event.target.value == ""){
+      streetError.innerHTML = "Please enter street address in this field!";
+      event.target.style.borderBottom = "2px solid red";
+      validStreet = false;
+      }
+    else if(event.target.value.length < 2){
+        streetError.innerHTML = "Please enter a proper street address!"
+        event.target.style.borderBottom = "2px solid red";
+        validStreet = false;
+      }
+    else{
+        streetError.innerHTML = "";
+        event.target.style.borderBottom = "2px solid #08AEEA";
+        validStreet = true;
+      }
+  })
+  // city name validation
+  city.addEventListener('input', (event)=>{
+    if(event.target.value == ""){
+      cityError.innerHTML = "Please enter City/Town name in this field!";
+      event.target.style.borderBottom = "2px solid red";
+      validCity = false;
+      }
+      else if(!isNaN(event.target.value)){
+        cityError.innerHTML = "Please enter alphabetic characters!";
+        event.target.style.borderBottom = "2px solid red";
+        validCity = false;
+        }
+        else if(event.target.value.search(/[0-9]/) > 0){
+        cityError.innerHTML = "You cannot enter digits within City/Town name!";
+        event.target.style.borderBottom = "2px solid red";
+        validCity = false;
+        }  
+        else if(event.target.value.length < 2){
+          cityError.innerHTML = "Please enter a proper City/Town name!"
+          event.target.style.borderBottom = "2px solid red";
+          validCity = false;
+          }
+          else{
+          cityError.innerHTML = "";
+          event.target.style.borderBottom = "2px solid #08AEEA";
+          validCity = true;
+          }
+  })
+  // state name validation
+  state.addEventListener('change',(event)=>{
+    if(event.target.value == "Select State"){
+      stateError.innerHTML = "Plese select your State/County";
+      event.target.style.borderBottom = "2px solid red";
+      validState = false;
+    }
+    else{
+      stateError.innerHTML = "";
+      event.target.style.borderBottom = "2px solid #08AEEA";
+      validState = true;
+    }
+  })
+  // post code validation
+  postCode.addEventListener('input',(event)=>{
+    if(event.target.value == ""){
+      postError.innerHTML = "Plese enter your Postal/ ZIP code!";
+      event.target.style.borderBottom = "2px solid red";
+      validPostCode = false;
+    }
+    else if(event.target.value.length != 5){
+      postError.innerHTML = "Plese enter proper Postal/ ZIP code!";
+      event.target.style.borderBottom = "2px solid red";
+      validPostCode = false;
+    }
+    else{
+      postError.innerHTML = "";
+      event.target.style.borderBottom = "2px solid #08AEEA";
+      validPostCode = true;
+    }
+  })
+  // phone number validation
+  phoneNum.addEventListener('input',(event)=>{
+    if(event.target.value == ""){
+      phoneNumError.innerHTML = "Plese enter your Phone number";
+      event.target.style.borderBottom = "2px solid red";
+      validPhoneNum = false;
+    }
+    else if((event.target.value.length > 11) || (event.target.value.length < 10)){
+      phoneNumError.innerHTML = "Plese enter proper Phone number";
+      event.target.style.borderBottom = "2px solid red";
+      validPhoneNum = false;
+    }
+    else{
+      phoneNumError.innerHTML = "";
+      event.target.style.borderBottom = "2px solid #08AEEA";
+      validPhoneNum = true;
+    }
+  })
+  // email address validation
+  emailAdd.addEventListener('input', (event)=>{
+    if(event.target.value == ""){
+      emailAddError.innerHTML = "Email address cannot be empty!";
+      event.target.style.borderBottom = "2px solid red";
+      validEmailAdd = false;
+  }
+  else if(event.target.value.includes(" ")){
+      emailAddError.innerHTML = "You cannot enter spaces within email!";
+      event.target.style.borderBottom = "2px solid red";
+      validEmailAdd = false;
+  }
+  else if(!event.target.value.includes("@")){
+      emailAddError.innerHTML = "Please enter @ in your email!";
+      event.target.style.borderBottom = "2px solid red";
+      validEmailAdd = false;
+  }
+  else if(!event.target.value.includes(".")){
+    emailAddError.innerHTML = "Please enter . in your email!";
+    event.target.style.borderBottom = "2px solid red";
+    validEmailAdd = false;
+}
+  else{
+      emailAddError.innerHTML = "";
+      event.target.style.borderBottom = "2px solid #08AEEA";
+      validEmailAdd = true;
+  }
+  })
+
+}
+
+// checkout order section rendering
+const renderOrderdetails = () => {
+ let orderHeaderDiv = document.querySelector(".order-header-div");
+ let cartItem = JSON.parse(sessionStorage.getItem("cart-item")) ?? [];
+ cartItem.forEach((product)=>{
+  let orderProduct = `
+    <div class="order-product">
+      <p class="order-name">${product.product_name} <span class="x-small">x</span> (${product.product_quantity})</p><p class="order-subtotal">PKR ${Intl.NumberFormat().format(product.product_subtotal)}</p>
+    </div>
+  `;
+  orderHeaderDiv.insertAdjacentHTML("afterend", orderProduct);
+ });
+
+ let orderTax = document.getElementById("order-tax");
+ let orderTotal = document.getElementById("order-total");
+ let orderSubtotal = document.getElementsByClassName("order-subtotal");
+ let orderSubtotalAmount = 0;
+
+ Array.from(orderSubtotal).forEach((orderAmount)=>{
+  orderSubtotalAmount += Number.parseInt(orderAmount.textContent.slice(4).replace(/[^\d.-]/g, ''))
+ })
+ 
+ orderTax.textContent = `PKR ${Intl.NumberFormat().format(Math.floor(orderSubtotalAmount * 13/100))}`;
+ orderTotal.textContent = `PKR ${Intl.NumberFormat().format(Math.floor(orderSubtotalAmount + (orderSubtotalAmount * 13/100)))}`
+}
+ 
+
+if(window.location.pathname.includes("checkout.html")){
+  validateBillingDetails();
+  renderOrderdetails();
 }
 
 
 
-
-// let cartContainer = document.getElementById("cart-container")
-// console.log(cartContainer)
-// let cartsection = document.querySelector(".cart-totals-section");

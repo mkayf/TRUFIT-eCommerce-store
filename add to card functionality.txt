@@ -17,7 +17,7 @@ Creating Add to Cart functionality:
 	2. two rows with subtotal and total
 	3. a button for proceed to checkout
 
-3. Create a Checkout page:
+3. Create a Checkout page: ==> DONE
   Billing details:
 	1. first name
 	2. last name
