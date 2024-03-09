@@ -65,7 +65,7 @@
                 <h5>Billing details</h5>
                 <hr>
                 <div class="billing-form-div">
-                    <form>
+                    <form id="form">
                         <div class="row billing-row">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                 <label for="fname">First name <span class="important">*</span></label>
@@ -151,22 +151,26 @@
               </div>
                 <hr>
               <div>
-                <input type="radio" name="payment-gateway" id="mastercard">
+                <input type="radio" name="payment-gateway" id="mastercard" value="Mastercard">
                 <label for="mastercard">Mastercard</label>
               </div>
               <div>
-                <input type="radio" name="payment-gateway" id="jazzcash" checked>
+                <input type="radio" name="payment-gateway" id="jazzcash" value="Jazzcash">
                 <label for="jazzcash">JazzCash</label>
               </div>
               <div>
-                <input type="radio" name="payment-gateway" id="visa">
+                <input type="radio" name="payment-gateway" id="visa" value="Visa">
                 <label for="visa">Visa</label>
               </div>
               <div>
-                <input type="radio" name="payment-gateway" id="cod">
-                <label for="code">Cash on delivery</label>
+                <input type="radio" name="payment-gateway" id="cod" checked>
+                <label for="cod">Cash on delivery</label>
               </div>
               </div>
+              <div class="order-btn-div mb-4">
+              <button class="order-btn" >Place order</button>
+              </div>
+              <div class="form-error text-danger my-3"></div>
             </div>
         </div>
       </div>

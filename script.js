@@ -790,6 +790,8 @@ if(window.location.pathname.includes("cart.html")){
 }
 
 // Checkout billing section validation
+// validators
+let validFName, validLName, validStreet, validCity, validState, validPostCode, validPhoneNum, validEmailAdd;
 
 const validateBillingDetails = () => {
   // input fields
@@ -810,15 +812,6 @@ const validateBillingDetails = () => {
   let postError = document.querySelector(".post-error");
   let phoneNumError = document.querySelector(".phone-n-error");
   let emailAddError = document.querySelector(".email-add-error");
-  // validators
-  var validFName;
-  var validLName;
-  var validStreet;
-  var validCity;
-  var validState;
-  var validPostCode;
-  var validPhoneNum;
-  var validEmailAdd;
   
   // first name validation
  fName.addEventListener('input', (event)=>{
@@ -999,7 +992,36 @@ const validateBillingDetails = () => {
       validEmailAdd = true;
   }
   })
+}
 
+// submit billing form and placing order
+const placeOrder = () => {
+  let orderBtn = document.querySelector(".order-btn");
+  orderBtn.addEventListener("click",()=>{
+    if(validFName && validLName && validCity && validEmailAdd && validPhoneNum && validPostCode && validState && validStreet){
+      setTimeout(() => {
+        document.getElementById("form").reset();
+        sessionStorage.clear();
+        displayCartItems();
+        document.querySelector('.checkout-main').innerHTML = `<div class="thanks-div" id="thanks" ><h2>Thank you.</h2> <p>Your order has been received.</p> <p><span class="order-info">Order number: #${Math.floor(Math.random() * 9000) + 1000}</span> <span class="order-info">Date: ${new Date().toLocaleDateString("en-US", {month : 'long', day : 'numeric', year : 'numeric'})}</span></p>
+        <div class="fill-btn-div d-flex justify-content-center"> 
+   <a href="/products.html">    
+    <button class="fill-btn">Discover More Items</button>
+    </a>
+    </div>
+        </div>`;
+        // Scroll to the top of the page
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Smooth scrolling effect
+  });
+      }, 1000);
+    }
+    else{
+      document.querySelector(".form-error").textContent = "Oops! Looks like there's an issue with your billing info. Please double-check and fill out all required fields correctly.";
+      // console.log("incorrect info");
+    }
+  })
 }
 
 // checkout order section rendering
@@ -1030,9 +1052,12 @@ const renderOrderdetails = () => {
  
 
 if(window.location.pathname.includes("checkout.html")){
-  validateBillingDetails();
   renderOrderdetails();
+  validateBillingDetails();
+  placeOrder();
 }
+
+
 
 
 

@@ -1971,6 +1971,46 @@ tbody tr td{
   width: 16px;
   cursor: pointer;
 }
+.order-btn{
+  width: 100%;
+  background-color: #1a3246;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  border: 1px solid #1a3246;
+  height: 60px;
+  transition: all 0.2s;
+}
+.order-btn:hover{
+  background-color: transparent;
+  color: #1a3246;
+}
+.thanks-div{
+  border: 1px solid #181a7a;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.thanks-div h2{
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #1a3246;
+  /* font-size: 60px; */
+}
+.thanks-div p{
+  font-size: 1.1rem;
+  color: black;
+  
+}
+.order-info{
+  border: 1px solid #181a7a;
+  padding: 8px;
+  color: #181a7a;
+  margin: 5px;
+}
 @media only screen and (max-width: 768px){
   .order-section{
     margin-top: 50px;
