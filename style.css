@@ -19,12 +19,8 @@ nav {
   height: 70px;
   background-color: #1a3246;
 }
-
-.logo-img {
-  width: 50px;
-}
-.logo-text{
-  letter-spacing: 4px;
+.logo{
+  width: 150px;
 }
 .nav-item{
   display: flex;
@@ -395,12 +391,10 @@ nav {
 .trend-head {
   font-size: 3rem;
   letter-spacing: 4px;
-  font-weight: 400;
-  /* margin-top: 50px; */
+  font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  border-bottom: 3px solid #041562;
-  /* display:table-cell; */
+  width: 100%;
 }
 .product-div {
   background: #ffffff;
@@ -469,7 +463,7 @@ nav {
 @media only screen and (max-width: 576px) {
   .trend-head {
     margin-top: 30px;
-    font-size: 35px;
+    font-size: 1.3rem;
   }
   .product-div {
     width: 300px;
@@ -622,9 +616,9 @@ nav {
   }
   #div-3 {
     background-image: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 0.8),
-        rgba(0, 0, 0, 0.5)
+        to top,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.2)
       ),
       url("images/div-3.jpg");
   }
@@ -654,8 +648,9 @@ nav {
     font-size: 18px;
   }
   #div-2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2)),
       url("images/div-2.jfif");
+      
   }
   .product-entry-div .text button {
     width: 120px;
@@ -770,7 +765,7 @@ nav {
 
 .all-products-div h1 {
   font-size: 50px;
-  font-weight: 400;
+  font-weight: bold;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin: 10px 3rem;
@@ -857,7 +852,7 @@ nav {
     font-size: 0.9rem;
   }
   .all-products-div h1 {
-    font-size: 35px;
+    font-size: 1.3rem;
     text-align: center;
     margin: 0;
   }
@@ -953,7 +948,7 @@ nav {
   }
   .nike-text-div button {
     width: 100%;
-    height: 30px;
+    height: 40px;
     font-size: 0.8rem;
   }
 }
@@ -1029,7 +1024,7 @@ nav {
   
   .instagram-div h1 {
     /* font-size: 30px; */
-    font-size: 25px;
+    font-size: 1.3rem;
     text-align: center;
   }
   .instagram-div p {
