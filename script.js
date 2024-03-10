@@ -581,7 +581,7 @@ if (window.location.pathname.includes("products.html")) {
 }
 
 // product modal functionality
-if((window.location.pathname !== "/cart.html") && (window.location.pathname !== "/blogs.html") && (window.location.pathname !== "/about.html") && (window.location.pathname !== "/contact.html") && (window.location.pathname !== "/checkout.html")){
+if(window.location.pathname.includes("index.html") || window.location.pathname.includes("products.html")){
 let productModal = new bootstrap.Modal("#productModal");
 let productDiv = document.getElementsByClassName("product-div");
 let productMessage = document.querySelector(".product-message");
