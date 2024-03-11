@@ -87,9 +87,10 @@ nav {
   border-radius: 50%;
   color: #1a3246;
   position: absolute;
-  /* width: 22px; */
   display: flex;
-  padding: 1px 8px;
+  /* padding: 1px 8px; */
+  width: 27px;
+  height: 27px;
   justify-content: center;
   align-items: center; 
   bottom: 60%;
@@ -157,19 +158,23 @@ nav {
 
 #cap1 h1 {
   font-weight: lighter;
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   color: #1a3246;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 #cap1 h1 span {
-  font-weight: 800;
+  font-weight: bold;
 }
 
 #cap1 p {
   /* border: 2px solid red; */
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 .carousel-btn {
-  margin-top: 30px;
+  margin-top: 10px;
   border: 1px solid #1a3246;
   background-color: transparent;
   width: 150px;
@@ -203,12 +208,16 @@ nav {
 }
 
 #cap2 h1 {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 #cap2 p {
-  font-weight: lighter;
-  font-size: 3rem;
+  font-weight: bold;
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 #cap2 h1 span {
   font-weight: bold;
@@ -233,11 +242,15 @@ nav {
 }
 
 #cap3 h1 {
-  font-size: 4.5rem;
-  font-weight: lighter;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 #cap3 p {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 #cap3 h1 span {
   font-weight: bold;
@@ -252,19 +265,20 @@ nav {
 
 @media only screen and (max-width: 992px) {
   #cap1 h1 {
-    font-size: 3.3rem;
+    font-size: 3rem;
   }
   #cap2 {
-    left: 100px;
+    left: 60px;
   }
   #cap2 h1 {
-    font-size: 3.3rem;
+    font-size: 3rem;
   }
   #cap3 {
-    width: 400px;
+    width: 500px;
+    
   }
   #cap3 h1 {
-    font-size: 3.3rem;
+    font-size: 3rem;
   }
 }
 
@@ -301,35 +315,43 @@ nav {
 
 @media only screen and (max-width: 576px) {
   .carousel-item {
-    height: 430px;
+    height: 350px;
   }
-  .cr-1 #cap1 {
+  .cr-1 #cap1, .cr-2 #cap2, .cr-3 #cap3 {
     padding-left: 20px;
     padding-right: 20px;
-    align-items: center;
   }
   #cap1 h1 {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
   #cap1 p {
-    font-size: 1.3rem;
+    font-size: 1rem;
+  }
+  #cap2{
+    transform: translateX(-10px);
   }
   #cap2 h1 {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
+    /* font-weight: 400; */
+  }
+  #cap2 h1 .modern-men{
+    background-color: transparent;
+    padding: 0;
   }
   #cap2 p {
     font-size: 1.3rem;
   }
   #cap3 h1 {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
   }
   #cap3 p {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   #cap1,
   #cap2,
   #cap3 {
-    width: 300px;
+    width: 310px;
   }
   #cap2 {
     left: 0px;
