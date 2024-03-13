@@ -127,7 +127,7 @@ nav {
 /* styling carousel here */
 
 .cr-1 {
-  background-image: url("images/carousel-images/female-img.png");
+  background-image: url("images/carousel-images/female-img-min.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -135,7 +135,7 @@ nav {
 }
 
 .cr-2 {
-  background-image: url("images/carousel-images/male-img-1.png");
+  background-image: url("images/carousel-images/male-img-1-min.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -143,7 +143,7 @@ nav {
 }
 
 .cr-3 {
-  background-image: url("images/carousel-images/male-img-2.png");
+  background-image: url("images/carousel-images/male-img-2-min.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -287,7 +287,7 @@ nav {
 @media only screen and (max-width: 768px) {
   .cr-1 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("images/carousel-images/female-img.png");
+      url("images/carousel-images/female-img-min.png");
   }
   #cap1 h1,
   p {
@@ -295,7 +295,7 @@ nav {
   }
   .cr-2 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("images/carousel-images/male-img-1.png");
+      url("images/carousel-images/male-img-1-min.png");
   }
   #cap2 h1,
   p {
@@ -303,7 +303,7 @@ nav {
   }
   .cr-3 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("images/carousel-images/male-img-2.png");
+      url("images/carousel-images/male-img-2-min.png");
   }
   #cap3 h1,
   p {
@@ -913,7 +913,6 @@ nav {
   align-items: center;
 }
 .nike-img-div {
-  /* border: 2px solid red; */
   height: 400px;
 }
 .nike-img-div img {
@@ -933,6 +932,7 @@ nav {
 }
 .nike-text-div p {
   font-size: 20px;
+  color: #222222;
 }
 .nike-text-div button {
   width: 150px;
@@ -1094,18 +1094,18 @@ nav {
 .name-box img {
   width: 70px;
   border-radius: 50%;
-  border: 3px solid #041562;
+  border: 3px solid #222222;
   margin-bottom: 10px;
 }
 .name-box h4 {
-  color: #041562;
+  color: #222222;
 }
 .content-box {
   width: 500px;
   font-size: 20px;
 }
 .quote {
-  color: blue;
+  color: #222222;
   /* text-align: center; */
   font-weight: bold;
 }
@@ -1140,7 +1140,7 @@ nav {
 /* footer styling */
 
 footer {
-  background-color: #1a3246;
+  background-color: #222222;
   /* height: 350px; */
   padding: 0 48px;
 }
@@ -1154,6 +1154,7 @@ footer .first-row {
 .footer-item h4 {
   /* background-color: white; */
   color: white;
+  
   display: inline-block;
   border-radius: 30px;
   /* padding: 3px 10px; */
@@ -1164,8 +1165,16 @@ footer .first-row {
 }
 .footer-item p {
   color: rgb(222, 222, 222);
-  font-size: 18px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   /* font-weight: lighter; */
+}
+.footer-item p:hover{
+  color: #fff;
+}
+.footer-item p a:hover{
+  color: #fff;
 }
 .social-links-footer p i {
   font-size: 25px;
@@ -1195,7 +1204,7 @@ footer .first-row {
     padding: 0 25px;
   }
   .footer-item p {
-    font-size: 18px;
+    font-size: 0.8rem;
   }
   .second-row {
     display: flex;
@@ -1568,22 +1577,30 @@ textarea {
     width: 50px;
     text-align: center;
     background-color: transparent;
-    border: 0.5px solid #041562;
+    border: 0.5px solid #222222;
 }
 #add-to-cart-btn{
-    background-color: #1a3246;
+    background-color: #222222;
     color: white;
     width: 300px;
     height: 60px;
     font-size: 1.1rem;
     letter-spacing: 3px;
-    border: 1px solid #1a3246;
+    border: 1px solid #222222;
     transition: all;
     transition-duration: 0.3s;
 }
+.bag-icon{
+  width: 20px;
+  filter: invert(1);
+  margin-bottom: 6px;
+}
 #add-to-cart-btn:hover{
     background-color: transparent;
-    color: #1a3246;
+    color: #222222;
+}
+#add-to-cart-btn:hover .bag-icon{
+  filter: invert(0);
 }
 
 
