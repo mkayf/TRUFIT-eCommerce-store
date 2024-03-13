@@ -928,6 +928,7 @@ nav {
   font-size: 60px;
   font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: 2px;
   color: #222222;
 }
 .nike-text-div p {
@@ -970,7 +971,7 @@ nav {
     height: 350px;
   }
   .nike-text-div h1 {
-    font-size: 35px;
+    font-size: 32px;
   }
   .nike-text-div p {
     font-size: 16px;
