@@ -1241,7 +1241,7 @@ footer .first-row {
   color: white;
 }
 #products-banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), #1a3246d0),
+  background: linear-gradient(rgba(0, 0, 0, 0.1), #222222),
     url("images/products-banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1264,11 +1264,11 @@ footer .first-row {
 
 /* blogs section styling goes here */
 #blogs-banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), #1a3246d0),
+  background: linear-gradient(rgba(0, 0, 0, 0.2), #222222),
     url("images/blog-banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center 60%;
 }
 
 .blog-section {
@@ -1284,12 +1284,12 @@ footer .first-row {
   text-transform: uppercase;
 }
 .blogs .div-line {
-  background-color: #041562;
+  background-color: #222222;
   height: 4px;
   width: 400px;
 }
 .blogs h2 {
-  color: #041562;
+  color: #222222;
   font-size: 40px;
   letter-spacing: 2px;
 }
@@ -1348,7 +1348,7 @@ footer .first-row {
 /* about page styling goes here */
 
 #about-banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), #1a3246d0),
+  background: linear-gradient(rgba(0, 0, 0, 0.2), #222222),
     url("images/news-letter.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1359,7 +1359,7 @@ footer .first-row {
   padding: 70px 0;
 }
 .about-section h1 {
-  color: #041562;
+  color: #222222;
   /* letter-spacing: 2px; */
   text-transform: uppercase;
 }
@@ -1377,19 +1377,19 @@ footer .first-row {
   width: 250px;
   height: 50px;
   padding: 11px 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 3px;
-  background-color: transparent;
-  border: 2px solid #1a3246;
-  color: #1a3246;
+  background-color: #222222;
+  border: 1px solid #222222;
+  color: #fff;
   font-weight: light;
   transition: all;
   transition-duration: 0.2s;
 }
 .about-btn:hover {
-  background-color: #1a3246;
-  color: #fff;
+  background-color: transparent;
+  color: #222222;
 }
 
 @media only screen and (max-width: 992px) {
@@ -1420,22 +1420,18 @@ footer .first-row {
 
 /* contact page styling goes here */
 #contact-banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), #1a3246d0),
+  background: linear-gradient(rgba(0, 0, 0, 0.2), #222222),
     url("images/contact-banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-.main-section {
-  background-color: #1a3246;
-}
 .top-part {
-  position: relative;
-  bottom: 80px;
+  margin: 50px auto;
 }
 .top-part .contact-box {
   height: 200px;
-  background-color: #e1e9ee;
+  background-color: #f6f6f9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1444,11 +1440,11 @@ footer .first-row {
 }
 .contact-box i {
   font-size: 40px;
-  color: #041562;
+  color: #222222;
 }
 .contact-box p a {
   text-decoration: none;
-  color: #1a3246;
+  color: #222222;
   /* font-weight: 800; */
   font-size: 18px;
 }
@@ -1457,11 +1453,11 @@ footer .first-row {
   margin-bottom: 80px;
 }
 .formdiv {
-  background-color: #e1e9ee;
+  background-color: #f6f6f9;
   padding: 15px;
 }
 .formdiv h2 {
-  color: #041562;
+  color: #222222;
   margin: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -1470,6 +1466,7 @@ footer .first-row {
 
 label {
   font-size: 14px;
+  color: #222222;
 }
 input {
   display: block;
@@ -1479,35 +1476,39 @@ input {
   outline: none;
   border: 0.5px solid rgba(0, 0, 0, 0.2);
   margin: 10px 0;
-  background-color: #e1e9ee;
+  background-color: transparent;
 }
 textarea {
-  background-color: #e1e9ee;
+  background-color: transparent;
   display: block;
   width: 100%;
   padding: 5px;
   outline: none;
   border: 0.5px solid rgba(0, 0, 0, 0.2);
   margin: 10px 0;
+  resize: none;
 }
 #register-btn {
   height: 40px;
   margin-top: 10px;
-  background-color: #1a3246;
+  background-color: #222222;
   color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
   outline: none;
   transition: all;
   transition-duration: 0.2s;
 }
 #register-btn:hover {
-  background-color: #162939;
+  background-color: black;
 }
 .input-div span {
   font-size: 14px;
 }
 .img-part {
   background: url("images/contact-form-img.jpg");
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1515,6 +1516,7 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 80px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1658,7 +1660,7 @@ textarea {
 /* cart page styling goes here */
 
 .cart-banner{
-  background: linear-gradient(rgba(0, 0, 0, 0.2), #1a3246d0),
+  background: linear-gradient(rgba(0, 0, 0, 0.2), #222222),
     url("images/cart-banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1666,9 +1668,9 @@ textarea {
 }
 
 .fill-btn{
-  border: 2px solid #181a7a;
+  border: 2px solid #222222;
   background-color: transparent;
-  color: #181a7a; 
+  color: #222222; 
   padding: 10px;
   width: 350px;
   text-transform: uppercase;
@@ -1677,7 +1679,7 @@ textarea {
 .fill-icon img{
   width: 30px;
 }
-main{
+main{ 
   margin: 60px 0;
 }
 main  h5{
@@ -1716,17 +1718,22 @@ tbody tr td{
 .delete-product-btn img{
   width: 20px;
   cursor: pointer;
+  filter: invert(1);
 }
 .updateBtn{
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  background-color: #1a3246;
+  background-color: #222222;
   border: none;
   color: #fff;
   height: 30px;
   padding-top: 3px;
   width: 100%;
+  transition: all 0.2s;
+}
+.update-btn:hover{
+  background-color: black;
 }
 .cart-product-img{
   display: flex;
@@ -1748,7 +1755,7 @@ tbody tr td{
 
 .sale-section a{
   text-decoration: none;
-  color: #162939;
+  color: #222222;
 }
 
 .cart-totals-section{
@@ -1809,9 +1816,13 @@ tbody tr td{
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  background-color: #1a3246;
+  background-color: #222222;
   color: white;
   border: none;
+  transition: all 0.2s;
+}
+#checkout-btn:hover{
+  background-color: black;
 }
 
 
