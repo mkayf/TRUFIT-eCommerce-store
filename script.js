@@ -717,7 +717,7 @@ const displayCartItems = () => {
    if(cartContainer.innerHTML == ""){
     document.querySelector("main").innerHTML = `
    <div class="fill-btn-div d-flex justify-content-center"> 
-   <a href="/products.html">    
+   <a href="products.html">    
     <button class="fill-btn">Cart empty! let's fill it up. <span class="fill-icon"><img src="images/fill-cart.png"></span></button>
     </a>
     </div>
@@ -1001,7 +1001,7 @@ const placeOrder = () => {
         displayCartItems();
         document.querySelector('.checkout-main').innerHTML = `<div class="thanks-div" id="thanks" ><h2>Thank you.</h2> <p>Your order has been received.</p> <p><span class="order-info">Order number: #${Math.floor(Math.random() * 9000) + 1000}</span> <span class="order-info">Date: ${new Date().toLocaleDateString("en-US", {month : 'long', day : 'numeric', year : 'numeric'})}</span></p>
         <div class="fill-btn-div d-flex justify-content-center"> 
-   <a href="/products.html">    
+   <a href="products.html">    
     <button class="fill-btn">Discover More Items</button>
     </a>
     </div>
