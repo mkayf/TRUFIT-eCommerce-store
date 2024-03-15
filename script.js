@@ -455,6 +455,7 @@ const generateProductStructure = (product) => {
                 product.productPrice
               )}</span></span>
             </div>
+            <div style="display: none;">${product.productID}</div>
           </div>
           `;
 };
