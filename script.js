@@ -562,7 +562,7 @@ if (collectorDiv){
 }
 
 // products page scripting
-if (collectorDiv){
+if (window.location.pathname.includes("products.html")){
   collectorDiv.innerHTML = "";
   allProductsLink.style.display = "none";
   combinedArrays.forEach((product) => {
