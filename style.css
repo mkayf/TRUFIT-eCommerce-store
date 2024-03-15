@@ -1436,7 +1436,8 @@ footer .first-row {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45);
+box-shadow:  13px 13px 27px #e0e0e0db,
+             -13px -13px 27px #f9f9f9;
 }
 .contact-box i {
   font-size: 40px;
@@ -1899,7 +1900,7 @@ tbody tr td{
 
 /* Checkout page styling goes here */
 #checkout-banner{
-  background: linear-gradient(rgba(0, 0, 0, 0.1), #1a3246d0),
+  background: linear-gradient(rgba(0, 0, 0, 0.1), #222222),
     url("images/checkout-banner.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1917,7 +1918,7 @@ tbody tr td{
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #181a7a;
+  color: #222222;
   position: relative;
   top: 10px;
 }
@@ -1946,7 +1947,7 @@ tbody tr td{
   padding: 10px 0;
   border: none;
   border-bottom: 2px solid #ccc;
-  color: black;
+  color: #222222;
   width: 100%;
   background-color: transparent;
   transition: border-color 0.3s ease-in-out;
@@ -1959,7 +1960,7 @@ tbody tr td{
 
 /* order section styling goes here */
 .order-section{
-  border: 1px solid #181a7a;
+  border: 1px solid #222222;
   padding: 0 20px;
 }
 .order-section h5{
@@ -1986,9 +1987,9 @@ tbody tr td{
 .order-div p{
   margin-bottom: 0;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-size: 1rem;
-  color: black;
+  color: #222222;
 }
 .order-div .order-header-div p, .order-total-div p{
   font-weight: bold;
@@ -2005,7 +2006,10 @@ tbody tr td{
 }
 .order-payment-div h5{
   font-size: 1rem;
-  color: #181a7a;
+  color: #222222;
+}
+.order-payment-div img{
+  width: 40px;
 }
 .order-payment-div div{
   display: flex;
@@ -2027,21 +2031,21 @@ tbody tr td{
 }
 .order-btn{
   width: 100%;
-  background-color: #1a3246;
+  background-color: #222222;
   color: white;
   text-transform: uppercase;
   font-size: 1.2rem;
   letter-spacing: 3px;
-  border: 1px solid #1a3246;
+  border: 1px solid #222222;
   height: 60px;
   transition: all 0.2s;
 }
 .order-btn:hover{
   background-color: transparent;
-  color: #1a3246;
+  color: #222222;
 }
 .thanks-div{
-  border: 1px solid #181a7a;
+  border: 1px solid #222222;
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -2051,7 +2055,7 @@ tbody tr td{
 .thanks-div h2{
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #1a3246;
+  color: #222222;
   /* font-size: 60px; */
 }
 .thanks-div p{
@@ -2060,19 +2064,23 @@ tbody tr td{
   
 }
 .order-info{
-  border: 1px solid #181a7a;
+  border: 1px solid #222222;
   padding: 8px;
-  color: #181a7a;
+  color: #222222;
   margin: 5px;
 }
 @media only screen and (max-width: 768px){
   .order-section{
     margin-top: 50px;
-  }
-  .order-section .order-div{
-    padding: 8px;
+    padding: 0 10px;
   }
   .order-div p{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+  }
+  .order-payment-div h5{
+    font-size: 0.9rem;
+  }
+  .order-payment-div img{
+    width: 25px;
   }
 }
