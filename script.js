@@ -677,11 +677,13 @@ const showItemNumbers = () => {
 }
 
 // going back to shopping page
-if(window.location.pathname.includes("cart.html")){
+let continueShoppingBtn = document.getElementById("continue-shopping");
+if(continueShoppingBtn){
 document.getElementById("continue-shopping").addEventListener("click",()=>{
   history.back();
 })
 }
+
 
 // displaying cart items in the cart page:
 
@@ -747,10 +749,9 @@ const updateItem = (index) => {
 displayCartItems();
 showItemNumbers();
 
-// 
-
+// cart subtotal calculation functionality: 
+let cartTotalSection = document.querySelector(".cart-totals-section");
 var cartSubtotalCalculation = () => {
-  let cartTotalSection = document.querySelector(".cart-totals-section");
   let cartSubtotal = document.getElementsByClassName("cart-subtotal");
   let subtotalAmount = 0;
   Array.from(cartSubtotal).forEach((amount)=>{
@@ -779,7 +780,7 @@ var cartSubtotalCalculation = () => {
   }
 }
 
-if(window.location.pathname.includes("cart.html")){
+if(cartTotalSection){
   cartSubtotalCalculation();
 }
 
