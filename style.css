@@ -497,6 +497,7 @@ nav {
 
 /* product-entry-section styling here */
 .product-entry-section {
+  
   background: rgb(9, 9, 121);
   background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
   display: grid;
@@ -509,8 +510,13 @@ nav {
 
 .product-entry-div {
   border-radius: 20px;
+  overflow: hidden;
 }
 
+.product-entry-div:hover .text button{
+  transform: translateY(0px);
+  opacity: 1;
+}
 #div-1 {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -619,9 +625,11 @@ nav {
   font-size: 0.8rem;
   padding-top: 3px;
   letter-spacing: 3px;
+  transform: translateY(50px);
+  opacity: 0;
   transition: all;
   /* font-weight: 600; */
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
 }
 .text button:hover {
   background-color: white;
