@@ -710,7 +710,7 @@ const displayCartItems = () => {
     `
   });
 
-  if(window.location.pathname.includes("cart.html")){
+  if(cartContainer){
    cartContainer.innerHTML = storedItems;
    if(cartContainer.innerHTML == ""){
     document.querySelector("main").innerHTML = `
@@ -756,7 +756,7 @@ var cartSubtotalCalculation = () => {
   Array.from(cartSubtotal).forEach((amount)=>{
     subtotalAmount += Number.parseInt(amount.textContent.slice(4).replace(/[^\d.-]/g, ''))
   })
-  if(cartTotalSection != null){
+  if(cartTotalSection){
   cartTotalSection.innerHTML = `
   <div class="cart-totals-div">
             <div class="total-head-part">
