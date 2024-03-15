@@ -460,8 +460,7 @@ const generateProductStructure = (product) => {
           `;
 };
 // Populating Trending section with Trending Products
-
-if (window.location.pathname.includes("index.html")) {
+if(trendingDiv){
   let trendProducts1 = productsArray1.slice(7, 10);
   let trendProducts2 = productsArray2.slice(2, 5);
   let trendProducts3 = productsArray3.slice(0, 2);
@@ -474,8 +473,7 @@ if (window.location.pathname.includes("index.html")) {
     );
   });
 }
-if (window.location.pathname.includes("index.html") || window.location.pathname.includes("products.html")
-) {
+if (collectorDiv){
   // Populating collector div in Product overview section with Products
   productsArray1.forEach((product) => {
     collectorDiv.insertAdjacentHTML(
@@ -564,7 +562,7 @@ if (window.location.pathname.includes("index.html") || window.location.pathname.
 }
 
 // products page scripting
-if (window.location.pathname.includes("products.html")) {
+if (collectorDiv){
   collectorDiv.innerHTML = "";
   allProductsLink.style.display = "none";
   combinedArrays.forEach((product) => {
@@ -577,7 +575,7 @@ if (window.location.pathname.includes("products.html")) {
 }
 
 // product modal functionality
-if(window.location.pathname.includes("index.html") || window.location.pathname.includes("products.html")){
+if(collectorDiv){
 let productModal = new bootstrap.Modal("#productModal");
 let productDiv = document.getElementsByClassName("product-div");
 let productMessage = document.querySelector(".product-message");
@@ -679,7 +677,7 @@ const showItemNumbers = () => {
 }
 
 // going back to shopping page
-if(window.location.pathname.includes("/cart.html")){
+if(window.location.pathname.includes("cart.html")){
 document.getElementById("continue-shopping").addEventListener("click",()=>{
   history.back();
 })
@@ -712,7 +710,7 @@ const displayCartItems = () => {
     `
   });
 
-  if(window.location.pathname.includes("/cart.html")){
+  if(window.location.pathname.includes("cart.html")){
    cartContainer.innerHTML = storedItems;
    if(cartContainer.innerHTML == ""){
     document.querySelector("main").innerHTML = `
