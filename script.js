@@ -455,15 +455,12 @@ const generateProductStructure = (product) => {
                 product.productPrice
               )}</span></span>
             </div>
-            <div class="product-id" style="display: none;">${
-              product.productID
-            }</div>
           </div>
           `;
 };
 // Populating Trending section with Trending Products
 
-if (window.location.pathname === "/index.html") {
+if (window.location.pathname.includes("index.html")) {
   let trendProducts1 = productsArray1.slice(7, 10);
   let trendProducts2 = productsArray2.slice(2, 5);
   let trendProducts3 = productsArray3.slice(0, 2);
@@ -476,9 +473,7 @@ if (window.location.pathname === "/index.html") {
     );
   });
 }
-if (
-  window.location.pathname === "/index.html" ||
-  window.location.pathname === "/products.html"
+if (window.location.pathname.includes("index.html") || window.location.pathname.includes("products.html")
 ) {
   // Populating collector div in Product overview section with Products
   productsArray1.forEach((product) => {
@@ -542,10 +537,10 @@ if (
     openProductModal();
   });
 
+
   // creating load more products functionality:
   loadBtn.addEventListener("click", () => {
     loadBtnclicks++;
-
     if (loadBtnclicks == 1) {
       productsArray2.forEach((product) => {
         collectorDiv.insertAdjacentHTML(
